@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adv. Edison Gnanaraj | Civil & Criminal Lawyer</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f4f7fa;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Hero */
+        .hero {
+            background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%);
+            color: #fff;
+            padding: 3rem 0 2.5rem;
+            border-bottom: 5px solid #b8860b;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .hero .title {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: #f0e6d0;
+            margin-top: 0.3rem;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: #b8860b;
+            color: #fff;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 0.8rem;
+        }
+
+        /* Main Sections */
+        section {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: #1a2a3a;
+            border-left: 5px solid #b8860b;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        /* Practice Areas */
+        .practice-item {
+            background: #f8faff;
+            padding: 1rem 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid #b8860b;
+            margin-bottom: 0.8rem;
+        }
+        .practice-item i {
+            color: #b8860b;
+            margin-right: 10px;
+            width: 1.4rem;
+        }
+        .practice-item strong {
+            display: inline-block;
+            min-width: 80px;
+        }
+
+        /* Contact & Address */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 0.5rem;
+        }
+        .contact-info .address {
+            flex: 2;
+            min-width: 200px;
+        }
+        .contact-info .address i {
+            color: #b8860b;
+            width: 1.8rem;
+            font-size: 1.2rem;
+        }
+        .contact-info .address p {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        .contact-info .cta {
+            flex: 1;
+            min-width: 160px;
+            background: #f0f4f9;
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .contact-info .cta .phone {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a2a3a;
+        }
+        .btn {
+            display: inline-block;
+            background: #b8860b;
+            color: #fff;
+            padding: 0.6rem 1.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 0.8rem;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background: #a0750a;
+        }
+
+        /* Case Details Placeholder */
+        .case-note {
+            background: #fcf8f0;
+            border: 1px dashed #b8860b;
+            padding: 1.2rem;
+            border-radius: 6px;
+            color: #5d4e2b;
+            margin-top: 0.5rem;
+        }
+        .case-note i {
+            margin-right: 8px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0 1.5rem;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            border-top: 1px solid #e0e6ed;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #2c3e50;
+            text-decoration: none;
+            border-bottom: 1px dotted #b8860b;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .grid-2 { grid-template-columns: 1fr; }
+            section { padding: 1.5rem; }
+            .contact-info { flex-direction: column; }
+        }
+        @media (max-width: 480px) {
+            .hero { padding: 2rem 0; }
+            .hero h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="hero">
+        <div class="container">
+            <h1>Edison Gnanaraj</h1>
+            <div class="title">Advocate, High Court of Madras &amp; Supreme Court of India</div>
+            <span class="badge"><i class="fas fa-gavel"></i> Civil &amp; Criminal Litigation</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- About / Jurisdiction -->
+        <section>
+            <h2><i class="fas fa-balance-scale" style="color:#b8860b; margin-right:10px;"></i>Jurisdiction &amp; Practice</h2>
+            <div class="grid-2">
+                <div>
+                    <p><strong><i class="fas fa-building" style="color:#b8860b; width:1.8rem;"></i>High Court of Madras</strong></p>
+                    <p>Handling civil and criminal matters at the principal seat in Chennai and circuit benches.</p>
+                    <p style="margin-top:1rem;"><strong><i class="fas fa-gavel" style="color:#b8860b; width:1.8rem;"></i>Supreme Court of India</strong></p>
+                    <p>Appearing before the Hon'ble Supreme Court in New Delhi for special leave petitions and appeals.</p>
+                </div>
+                <div>
+                    <p><span style="background:#eef3f7; padding:0.2rem 0.8rem; border-radius:20px;"><i class="fas fa-check-circle" style="color:#b8860b;"></i> Civil Law</span> &nbsp; <span style="background:#eef3f7; padding:0.2rem 0.8rem; border-radius:20px;"><i class="fas fa-check-circle" style="color:#b8860b;"></i> Criminal Law</span></p>
+                    <p style="margin-top:0.8rem;"><i class="fas fa-map-marker-alt" style="color:#b8860b; width:1.8rem;"></i> Based in Vellore, serving clients across Tamil Nadu and nationally.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Details Placeholder -->
+        <section>
+            <h2><i class="fas fa-folder-open" style="color:#b8860b; margin-right:10px;"></i>Case Highlights</h2>
+            <div class="case-note">
+                <i class="fas fa-info-circle" style="color:#b8860b;"></i> 
+                <strong>Selected case details from eCourts:</strong> 
+                <a href="https://ecourtsindia.com/lawyer/edison-gnanaraj" target="_blank" style="color:#1a2a3a; font-weight:600;">View on eCourts</a>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1.2rem;">
+                <div style="background:#f8faff; padding:0.8rem 1.2rem; border-radius:6px; border-left:3px solid #b8860b;">
+                    <small style="color:#7f8c8d;">Case Type</small>
+                    <p style="font-weight:500;">Civil / Criminal</p>
+                </div>
+                <div style="background:#f8faff; padding:0.8rem 1.2rem; border-radius:6px; border-left:3px solid #b8860b;">
+                    <small style="color:#7f8c8d;">Court</small>
+                    <p style="font-weight:500;">Madras High Court / Supreme Court</p>
+                </div>
+            </div>
+            <p style="margin-top:1rem; font-size:0.95rem; color:#3d5166;">
+                <i class="fas fa-arrow-right" style="color:#b8860b;"></i> For a complete list of cases, please visit the official eCourts profile or contact the office.
+            </p>
+        </section>
+
+        <!-- Contact & Address -->
+        <section>
+            <h2><i class="fas fa-address-card" style="color:#b8860b; margin-right:10px;"></i>Office &amp; Contact</h2>
+            <div class="contact-info">
+                <div class="address">
+                    <p><i class="fas fa-map-pin"></i> <strong>Chambers:</strong></p>
+                    <p><i class="fas fa-location-dot"></i> 1/A Officer's Line,<br /> Vellore - 632 001,<br /> Vellore District, Tamil Nadu, India.</p>
+                    <p style="margin-top:0.8rem;"><i class="fas fa-phone-alt"></i> <a href="tel:+914162xxxxxx" style="color:#1a2a3a; text-decoration:none;">+91 4162 XXX XXX</a> (Office)</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:edison@example.com" style="color:#1a2a3a; text-decoration:none;">edison@example.com</a></p>
+                </div>
+                <div class="cta">
+                    <p><i class="fas fa-calendar-check" style="color:#b8860b; font-size:1.5rem;"></i></p>
+                    <p><strong>Consultation</strong><br />By appointment only</p>
+                    <p class="phone"><i class="fas fa-phone" style="font-size:1.2rem;"></i> +91 99999 88888</p>
+                    <a href="mailto:edison@example.com" class="btn"><i class="fas fa-paper-plane"></i> Email Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Adv. Edison Gnanaraj. All rights reserved.</p>
+            <p style="margin-top:0.3rem;">Madras High Court &bull; Supreme Court of India &bull; Vellore, Tamil Nadu</p>
+            <p style="margin-top:0.5rem; font-size:0.8rem;">
+                <i class="fas fa-shield-alt"></i> This is a professional informational website. For legal advice, please contact the office directly.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
