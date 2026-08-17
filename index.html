@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ta">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -80,6 +80,34 @@
             margin-top: 0.8rem;
         }
 
+        /* Language Toggle */
+        .lang-toggle {
+            text-align: right;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+        }
+        .lang-toggle a {
+            color: #b8860b;
+            text-decoration: none;
+            padding: 0.2rem 0.8rem;
+            border: 1px solid #b8860b;
+            border-radius: 4px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+        .lang-toggle a:hover {
+            background: #b8860b;
+            color: #fff;
+        }
+        .lang-toggle .active {
+            background: #b8860b;
+            color: #fff;
+        }
+        .lang-toggle .separator {
+            color: #7f8c8d;
+            margin: 0 0.3rem;
+        }
+
         /* Main Sections */
         section {
             background: #fff;
@@ -152,8 +180,81 @@
         .btn-email:hover { background: #2c3e50; }
         .btn-form { background: #b8860b; }
         .btn-form:hover { background: #a0750a; }
+        .btn-map { background: #4285f4; }
+        .btn-map:hover { background: #3367d6; }
 
         /* Contact & Address */
+        .address-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1.5rem 0 1rem;
+        }
+        .address-card {
+            background: #f8faff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #b8860b;
+            position: relative;
+        }
+        .address-card h3 {
+            color: #1a2a3a;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+        .address-card h3 i {
+            color: #b8860b;
+            margin-right: 8px;
+        }
+        .address-card p {
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        .address-card p i {
+            color: #b8860b;
+            width: 1.6rem;
+            margin-top: 0.2rem;
+            font-size: 1rem;
+        }
+        .address-card .badge-court {
+            display: inline-block;
+            background: #1a2a3a;
+            color: #fff;
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.3rem;
+        }
+        .address-card .map-link {
+            display: inline-block;
+            margin-top: 0.8rem;
+            font-size: 0.85rem;
+            color: #4285f4;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .address-card .map-link i {
+            color: #4285f4;
+            margin-right: 4px;
+        }
+        .address-card .map-link:hover {
+            text-decoration: underline;
+        }
+        .address-card .tamil-address {
+            font-size: 0.9rem;
+            color: #5d6d7e;
+            margin-top: 0.3rem;
+            padding-top: 0.3rem;
+            border-top: 1px dashed #dce1e8;
+        }
+        .address-card .tamil-address i {
+            color: #b8860b;
+            width: 1.6rem;
+            font-size: 0.9rem;
+        }
+
         .contact-info {
             display: flex;
             flex-wrap: wrap;
@@ -261,17 +362,24 @@
             text-decoration: none;
             border-bottom: 1px dotted #b8860b;
         }
+        footer .tamil-footer {
+            font-size: 0.85rem;
+            color: #95a5a6;
+            margin-top: 0.2rem;
+        }
 
         /* Responsive */
         @media (max-width: 768px) {
             .hero { flex-direction: column-reverse; text-align: center; }
             .hero h1 { font-size: 2rem; }
             .grid-2 { grid-template-columns: 1fr; }
+            .address-grid { grid-template-columns: 1fr; }
             section { padding: 1.5rem; }
             .contact-info { flex-direction: column; }
             .hero-photo { flex-basis: auto; }
             .contact-buttons { justify-content: center; }
             .form-container .form-row { grid-template-columns: 1fr; }
+            .lang-toggle { text-align: center; }
         }
         @media (max-width: 480px) {
             .hero { padding: 2rem 0; }
@@ -291,12 +399,22 @@
         </div>
         <div class="hero-photo">
             <!-- REPLACE THE SRC BELOW WITH YOUR ACTUAL IMAGE URL -->
-            <img src="http:/vannakkam.github.io/Edison/profile.jpg" alt="Adv. Edison Gnanaraj" />
+            <img src="https://vannakkam.github.io/Edison/profile.jpg" alt="Adv. Edison Gnanaraj" />
             <div class="placeholder-text"><i class="fas fa-camera"></i> Your photo</div>
         </div>
     </header>
 
     <main class="container">
+        <!-- Language Toggle (Simple visual indicator) -->
+        <div class="lang-toggle">
+            <span class="active">English</span>
+            <span class="separator">|</span>
+            <a href="#tamil">தமிழ்</a>
+            <span style="font-size:0.75rem; color:#95a5a6; margin-left:0.5rem;">
+                <i class="fas fa-info-circle"></i> (Translations below)
+            </span>
+        </div>
+
         <!-- About / Jurisdiction -->
         <section>
             <h2><i class="fas fa-balance-scale" style="color:#b8860b; margin-right:10px;"></i>Jurisdiction &amp; Practice</h2>
@@ -306,10 +424,19 @@
                     <p>Handling civil and criminal matters at the principal seat in Chennai and circuit benches.</p>
                     <p style="margin-top:1rem;"><strong><i class="fas fa-gavel" style="color:#b8860b; width:1.8rem;"></i>Supreme Court of India</strong></p>
                     <p>Appearing before the Hon'ble Supreme Court in New Delhi for special leave petitions and appeals.</p>
+                    <!-- Tamil Translation -->
+                    <div style="margin-top:1rem; padding-top:1rem; border-top:1px dashed #dce1e8; font-size:0.95rem; color:#3d5166;">
+                        <p><i class="fas fa-language" style="color:#b8860b; width:1.8rem;"></i> <strong>தமிழ்:</strong></p>
+                        <p>சென்னை உயர்நீதிமன்றம் மற்றும் இந்திய உச்ச நீதிமன்றத்தில் வழக்குகளை கையாளுகிறேன். சிவில் மற்றும் கிரிமினல் வழக்குகளில் நிபுணத்துவம்.</p>
+                    </div>
                 </div>
                 <div>
                     <p><span style="background:#eef3f7; padding:0.2rem 0.8rem; border-radius:20px;"><i class="fas fa-check-circle" style="color:#b8860b;"></i> Civil Law</span> &nbsp; <span style="background:#eef3f7; padding:0.2rem 0.8rem; border-radius:20px;"><i class="fas fa-check-circle" style="color:#b8860b;"></i> Criminal Law</span></p>
-                    <p style="margin-top:0.8rem;"><i class="fas fa-map-marker-alt" style="color:#b8860b; width:1.8rem;"></i> Based in Vellore, serving clients across Tamil Nadu and nationally.</p>
+                    <p style="margin-top:0.8rem;"><i class="fas fa-map-marker-alt" style="color:#b8860b; width:1.8rem;"></i> Based in Vellore &amp; Chennai, serving clients across Tamil Nadu and nationally.</p>
+                    <!-- Tamil Translation -->
+                    <div style="margin-top:1rem; padding-top:1rem; border-top:1px dashed #dce1e8; font-size:0.95rem; color:#3d5166;">
+                        <p><i class="fas fa-map-marker-alt" style="color:#b8860b; width:1.8rem;"></i> வேலூர் மற்றும் சென்னையில் செயல்படுகிறேன். தமிழ்நாடு முழுவதும் மற்றும் தேசிய அளவில் வாடிக்கையாளர்களுக்கு சேவை.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -326,25 +453,30 @@
                 <div style="background:#f8faff; padding:0.8rem 1.2rem; border-radius:6px; border-left:3px solid #b8860b;">
                     <small style="color:#7f8c8d;">Case Type</small>
                     <p style="font-weight:500;">Civil / Criminal</p>
+                    <small style="color:#95a5a6; font-size:0.75rem;">சிவில் / கிரிமினல்</small>
                 </div>
                 <div style="background:#f8faff; padding:0.8rem 1.2rem; border-radius:6px; border-left:3px solid #b8860b;">
                     <small style="color:#7f8c8d;">Court</small>
                     <p style="font-weight:500;">Madras High Court / Supreme Court</p>
+                    <small style="color:#95a5a6; font-size:0.75rem;">சென்னை உயர்நீதிமன்றம் / உச்ச நீதிமன்றம்</small>
                 </div>
             </div>
             <p style="margin-top:1rem; font-size:0.95rem; color:#3d5166;">
                 <i class="fas fa-arrow-right" style="color:#b8860b;"></i> For a complete list of cases, please visit the official eCourts profile or contact the office.
             </p>
+            <p style="font-size:0.85rem; color:#95a5a6; margin-top:0.3rem;">
+                <i class="fas fa-language" style="color:#b8860b;"></i> முழு வழக்கு பட்டியலுக்கு eCourts இணையதளத்தை பார்வையிடவும்.
+            </p>
         </section>
 
         <!-- Contact Section with Multiple Options -->
         <section>
-            <h2><i class="fas fa-address-card" style="color:#b8860b; margin-right:10px;"></i>Get in Touch</h2>
+            <h2><i class="fas fa-address-card" style="color:#b8860b; margin-right:10px;"></i>Get in Touch <span style="font-size:1rem; color:#95a5a6; font-weight:400;">/ தொடர்பு கொள்ள</span></h2>
             
             <!-- Quick Contact Buttons -->
             <div class="contact-buttons">
                 <a href="tel:+919360222220" class="btn btn-call">
-                    <i class="fas fa-phone"></i> Call Now
+                    <i class="fas fa-phone"></i> Call Now / அழைக்கவும்
                 </a>
                 <a href="https://wa.me/919360222220?text=Hello%20Adv.%20Gnanaraj%2C%20I%20have%20a%20legal%20enquiry%20about%3A" 
                    target="_blank" class="btn btn-whatsapp">
@@ -352,24 +484,66 @@
                 </a>
                 <a href="mailto:9360222220edison@gmail.com?subject=Legal%20Enquiry%20from%20Website%20Visitor&body=Name:%0D%0APhone:%0D%0AYour%20legal%20question:%0D%0A" 
                    class="btn btn-email">
-                    <i class="fas fa-envelope"></i> Email
+                    <i class="fas fa-envelope"></i> Email / மின்னஞ்சல்
                 </a>
             </div>
 
-            <!-- Office Address -->
+            <!-- Two Office Addresses with Google Maps Links -->
+            <div class="address-grid">
+                <!-- Chennai - High Court Chambers -->
+                <div class="address-card">
+                    <h3><i class="fas fa-gavel"></i> High Court Chambers</h3>
+                    <p><i class="fas fa-location-dot"></i> No 183, New Additional Law Chambers,<br /> Madras High Court Campus,<br /> Chennai - 600 104, Tamil Nadu</p>
+                    <span class="badge-court"><i class="fas fa-building"></i> Principal Seat</span>
+                    <br />
+                    <a href="https://www.google.com/maps/dir//Madras+High+Court,+Chennai" target="_blank" class="map-link">
+                        <i class="fas fa-map-marked-alt"></i> Open in Google Maps
+                    </a>
+                    <!-- Tamil Translation -->
+                    <div class="tamil-address">
+                        <p><i class="fas fa-location-dot"></i> எண் 183, புதிய கூடுதல் சட்ட அறைகள்,<br /> சென்னை உயர்நீதிமன்ற வளாகம்,<br /> சென்னை - 600 104, தமிழ்நாடு</p>
+                        <a href="https://www.google.com/maps/dir//Madras+High+Court,+Chennai" target="_blank" class="map-link" style="font-size:0.8rem;">
+                            <i class="fas fa-map-marked-alt"></i> கூகுள் மேப்ஸில் திறக்க
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vellore - Branch Office -->
+                <div class="address-card">
+                    <h3><i class="fas fa-home"></i> Branch Office / கிளை அலுவலகம்</h3>
+                    <p><i class="fas fa-location-dot"></i> No: 2/64, Masilamani Street,<br /> Kosapet, Vellore - 632 001,<br /> Vellore District, Tamil Nadu</p>
+                    <span class="badge-court"><i class="fas fa-map-pin"></i> Branch Office</span>
+                    <br />
+                    <a href="https://www.google.com/maps/dir//Kosapet,+Vellore,+Tamil+Nadu" target="_blank" class="map-link">
+                        <i class="fas fa-map-marked-alt"></i> Open in Google Maps
+                    </a>
+                    <!-- Tamil Translation -->
+                    <div class="tamil-address">
+                        <p><i class="fas fa-location-dot"></i> எண்: 2/64, மாசிலாமணி தெரு,<br /> கோசப்பேட்டை, வேலூர் - 632 001,<br /> வேலூர் மாவட்டம், தமிழ்நாடு</p>
+                        <a href="https://www.google.com/maps/dir//Kosapet,+Vellore,+Tamil+Nadu" target="_blank" class="map-link" style="font-size:0.8rem;">
+                            <i class="fas fa-map-marked-alt"></i> கூகுள் மேப்ஸில் திறக்க
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Details -->
             <div class="contact-info">
                 <div class="address">
-                    <p style="margin-top: 1.5rem;"><i class="fas fa-map-pin"></i> <strong>Chambers:</strong></p>
-                    <p><i class="fas fa-location-dot"></i> 1/A Officer's Line,<br /> Vellore - 632 001,<br /> Vellore District, Tamil Nadu, India.</p>
-                    <p style="margin-top:0.8rem;"><i class="fas fa-phone-alt"></i> <a href="tel:+919360222220" style="color:#1a2a3a; text-decoration:none;">+91 93602 22220</a></p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+919360222220" style="color:#1a2a3a; text-decoration:none;">+91 93602 22220</a></p>
                     <p><i class="fas fa-envelope"></i> <a href="mailto:9360222220edison@gmail.com" style="color:#1a2a3a; text-decoration:none;">9360222220edison@gmail.com</a></p>
+                    <p><i class="fas fa-clock" style="color:#b8860b; width:1.8rem;"></i> Mon - Fri: 10:00 AM - 5:00 PM</p>
+                    <p style="font-size:0.9rem; color:#95a5a6; margin-top:0.3rem;">
+                        <i class="fas fa-clock" style="color:#b8860b; width:1.8rem;"></i> திங்கள் - வெள்ளி: காலை 10:00 - மாலை 5:00
+                    </p>
                 </div>
                 <div class="cta">
                     <p><i class="fas fa-calendar-check" style="color:#b8860b; font-size:1.5rem;"></i></p>
                     <p><strong>Consultation</strong><br />By appointment only</p>
+                    <p style="font-size:0.85rem; color:#95a5a6;">முன் ஏற்பாட்டின் பேரில் மட்டுமே</p>
                     <p class="phone"><i class="fas fa-phone" style="font-size:1.2rem;"></i> +91 93602 22220</p>
                     <a href="mailto:9360222220edison@gmail.com" class="btn btn-form" style="display: inline-flex;">
-                        <i class="fas fa-paper-plane"></i> Email Now
+                        <i class="fas fa-paper-plane"></i> Email Now / மின்னஞ்சல் அனுப்பு
                     </a>
                 </div>
             </div>
@@ -377,41 +551,41 @@
             <!-- Simple Enquiry Form -->
             <div class="form-container">
                 <h3 style="color: #1a2a3a; margin-bottom: 1rem; font-size: 1.2rem;">
-                    <i class="fas fa-edit" style="color:#b8860b;"></i> Send a Quick Message
+                    <i class="fas fa-edit" style="color:#b8860b;"></i> Send a Quick Message / விரைவான செய்தி அனுப்பு
                 </h3>
                 <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                     <div class="form-row">
                         <div>
-                            <label for="name">Your Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            <label for="name">Your Name / உங்கள் பெயர் *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name / முழு பெயரை உள்ளிடவும்">
                         </div>
                         <div>
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                            <label for="phone">Phone Number / தொலைபேசி எண் *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number / தொலைபேசி எண்ணை உள்ளிடவும்">
                         </div>
                     </div>
                     <div>
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                        <label for="email">Email Address / மின்னஞ்சல் முகவரி *</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address / மின்னஞ்சல் முகவரியை உள்ளிடவும்">
                     </div>
                     <div>
-                        <label for="case_type">Type of Case</label>
+                        <label for="case_type">Type of Case / வழக்கின் வகை</label>
                         <select id="case_type" name="case_type">
-                            <option value="Civil">Civil</option>
-                            <option value="Criminal">Criminal</option>
-                            <option value="Both">Both</option>
-                            <option value="Not Sure">Not Sure</option>
+                            <option value="Civil">Civil / சிவில்</option>
+                            <option value="Criminal">Criminal / கிரிமினல்</option>
+                            <option value="Both">Both / இரண்டும்</option>
+                            <option value="Not Sure">Not Sure / உறுதியாக தெரியவில்லை</option>
                         </select>
                     </div>
                     <div>
-                        <label for="message">Brief Description of Your Matter *</label>
-                        <textarea id="message" name="message" rows="4" required placeholder="Please describe your legal issue briefly..."></textarea>
+                        <label for="message">Brief Description / சுருக்கமான விளக்கம் *</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Please describe your legal issue briefly... / உங்கள் சட்டப் பிரச்சினையை சுருக்கமாக விவரிக்கவும்..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-form" style="font-size: 1rem; width: auto;">
-                        <i class="fas fa-paper-plane"></i> Send Enquiry
+                        <i class="fas fa-paper-plane"></i> Send Enquiry / அனுப்பு
                     </button>
                     <p class="form-note">
-                        <i class="fas fa-lock"></i> Your information is confidential and will not be shared.
+                        <i class="fas fa-lock"></i> Your information is confidential and will not be shared. / உங்கள் தகவல்கள் ரகசியமானவை மற்றும் பகிரப்படாது.
                     </p>
                 </form>
             </div>
@@ -422,9 +596,13 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 Adv. Edison Gnanaraj. All rights reserved.</p>
-            <p style="margin-top:0.3rem;">Madras High Court &bull; Supreme Court of India &bull; Vellore, Tamil Nadu</p>
+            <p style="margin-top:0.3rem;">Madras High Court &bull; Supreme Court of India &bull; Chennai &amp; Vellore</p>
+            <p class="tamil-footer">சென்னை உயர்நீதிமன்றம் &bull; இந்திய உச்ச நீதிமன்றம் &bull; சென்னை &amp; வேலூர்</p>
             <p style="margin-top:0.5rem; font-size:0.8rem;">
                 <i class="fas fa-shield-alt"></i> This is a professional informational website. For legal advice, please contact the office directly.
+            </p>
+            <p style="font-size:0.75rem; color:#95a5a6; margin-top:0.2rem;">
+                இது ஒரு தொழில்முறை தகவல் இணையதளம். சட்ட ஆலோசனைக்கு, நேரடியாக அலுவலகத்தை தொடர்பு கொள்ளவும்.
             </p>
         </div>
     </footer>
