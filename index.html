@@ -7,6 +7,7 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
+        /* --- Your existing CSS remains exactly the same --- */
         /* Reset & Base */
         * {
             margin: 0;
@@ -44,19 +45,19 @@
             flex: 0 0 140px;
             text-align: center;
         }
-        .hero-photo img {
+        .hero-photo .photo-placeholder {
             width: 140px;
             height: 140px;
             border-radius: 50%;
-            object-fit: cover;
+            background: #2c3e50;
             border: 4px solid #b8860b;
-            background-color: #d9d9d9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            color: #b8860b;
+            margin: 0 auto;
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-        .hero-photo .placeholder-text {
-            font-size: 0.8rem;
-            color: #b0bcc9;
-            margin-top: 6px;
         }
         .hero h1 {
             font-size: 2.8rem;
@@ -384,13 +385,13 @@
         @media (max-width: 480px) {
             .hero { padding: 2rem 0; }
             .hero h1 { font-size: 1.6rem; }
-            .hero-photo img { width: 120px; height: 120px; }
+            .hero-photo .photo-placeholder { width: 120px; height: 120px; font-size: 2.8rem; }
             .btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Header with Photo -->
+    <!-- Header with Photo Placeholder -->
     <header class="hero">
         <div class="hero-content container" style="flex:2; min-width:250px;">
             <h1>Edison Gnanaraj</h1>
@@ -398,14 +399,15 @@
             <span class="badge"><i class="fas fa-gavel"></i> Civil &amp; Criminal Litigation</span>
         </div>
         <div class="hero-photo">
-            <!-- REPLACE THE SRC BELOW WITH YOUR ACTUAL IMAGE URL -->
-            <img src="https://vannakkam.github.io/Edison/profile.jpg" alt="Adv. Edison Gnanaraj" />
-            <div class="placeholder-text"><i class="fas fa-camera"></i> Supreme Court </div>
+            <!-- Replace the div below with your <img> tag -->
+            <div class="photo-placeholder">
+                <i class="fas fa-user-circle"></i>
+            </div>
         </div>
     </header>
 
     <main class="container">
-        <!-- Language Toggle (Simple visual indicator) -->
+        <!-- Language Toggle -->
         <div class="lang-toggle">
             <span class="active">English</span>
             <span class="separator">|</span>
@@ -548,25 +550,26 @@
                 </div>
             </div>
 
-            <!-- Simple Enquiry Form -->
+            <!-- Simple Enquiry Form with Your Formspree Endpoint -->
             <div class="form-container">
                 <h3 style="color: #1a2a3a; margin-bottom: 1rem; font-size: 1.2rem;">
                     <i class="fas fa-edit" style="color:#b8860b;"></i> Send a Quick Message / விரைவான செய்தி அனுப்பு
                 </h3>
-                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <!-- YOUR UPDATED FORM ACTION -->
+                <form action="https://formspree.io/f/xljrpjdw" method="POST">
                     <div class="form-row">
                         <div>
                             <label for="name">Your Name / உங்கள் பெயர் *</label>
-                            <input type="text" id="name" name="name" required placeholder="Enter your full name / முழு பெயரை உள்ளிடவும்">
+                            <input type="text" id="name" name="name" required placeholder="Your full name">
                         </div>
                         <div>
                             <label for="phone">Phone Number / தொலைபேசி எண் *</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number / தொலைபேசி எண்ணை உள்ளிடவும்">
+                            <input type="tel" id="phone" name="phone" required placeholder="Your phone number">
                         </div>
                     </div>
                     <div>
                         <label for="email">Email Address / மின்னஞ்சல் முகவரி *</label>
-                        <input type="email" id="email" name="email" required placeholder="Enter your email address / மின்னஞ்சல் முகவரியை உள்ளிடவும்">
+                        <input type="email" id="email" name="email" required placeholder="Your email address">
                     </div>
                     <div>
                         <label for="case_type">Type of Case / வழக்கின் வகை</label>
@@ -579,7 +582,7 @@
                     </div>
                     <div>
                         <label for="message">Brief Description / சுருக்கமான விளக்கம் *</label>
-                        <textarea id="message" name="message" rows="4" required placeholder="Please describe your legal issue briefly... / உங்கள் சட்டப் பிரச்சினையை சுருக்கமாக விவரிக்கவும்..."></textarea>
+                        <textarea id="message" name="message" rows="4" required placeholder="Briefly describe your legal issue"></textarea>
                     </div>
                     <button type="submit" class="btn btn-form" style="font-size: 1rem; width: auto;">
                         <i class="fas fa-paper-plane"></i> Send Enquiry / அனுப்பு
